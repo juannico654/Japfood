@@ -127,8 +127,21 @@
                                 });
                             });
                     </script>
-
-
+                    <script>
+                        let mesas = [
+                            { id: 1, numero_mesa: 1, capacidad: 2 },
+                            { id: 2, numero_mesa: 2, capacidad: 4 },
+                            { id: 3, numero_mesa: 3, capacidad: 6 },
+                            { id: 4, numero_mesa: 4, capacidad: 2 }
+                        ];
+                        let select = document.getElementById("id_mesa");
+                        mesas.forEach(m => {
+                            let option = document.createElement("option");
+                            option.value = m.id;
+                            option.textContent = `Mesa ${m.numero_mesa} (${m.capacidad} personas)`;
+                            select.appendChild(option);
+                        });
+                    </script>
                 </div>
             </div>
         </div>
